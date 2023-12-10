@@ -1,0 +1,4 @@
+<app-header ></app-header>
+<app-search [placeholderText]="'@username + tag to search within a verified channel'" (myText)="modifiedText($event)"></app-search>
+<p>{{myText}}</p>
+<app-gifs></app-gifs>

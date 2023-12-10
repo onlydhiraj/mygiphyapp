@@ -1,0 +1,11 @@
+<p>Trending Gif's</p>
+<div class="gifs">
+    <div class="gif" *ngFor="let gif of gifs | paginate: {itemsPerPage: 10, currentPage:pageNumber}">
+        <img [src]="gif.images.downsized.url" alt="">
+
+    </div>
+</div>
+
+<div class="pagination">
+    <pagination-controls (pageChange)="pageNumber=$event"></pagination-controls>
+</div>
